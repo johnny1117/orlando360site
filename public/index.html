@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orlando 360 | Estúdio de Branding</title>
+<meta name="description" content="Estúdio de branding especializado em identidade visual. Marcas únicas e memoráveis, com um olhar estratégico.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Orlando 360 | Estúdio de Branding">
+<meta property="og:description" content="Identidade visual para marcas únicas e memoráveis, com um olhar estratégico.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/aura.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-150 -178 794 794'%3E%3Crect x='-150' y='-178' width='794' height='794' rx='150' fill='%230a0a0a'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M202 435c-23-5-31-11-74-49c-35-32-37-32-86 17c-16 15-30 28-31 29c-3 2-8 1-10-2c-2-3-1-255 1-260c4-16 3-14 75-86c82-82 78-78 101-83c10-1 125-2 133 0c26 6 22 2 102 82c71 71 71 70 75 84c4 10 4 115 0 124c-6 15-11 21-43 45c-37 29-37 26 1 64c28 28 29 30 24 34c-2 3-257 3-268 1zM366 353c2-1 6-2 8-3c2-2 7-5 11-9c6-6 8-9 12-19c5-10 4-212-1-221c-4-10-14-16-26-18c-8-1-197-1-234 0c-30 1-37 5-43 24c-2 5-1 204 0 211c5 18 20 33 36 36c9 2 234 1 237-1z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0a;
+  --paper:#f5f0e8;
+  --white:#ffffff;
+  --serif:"Cormorant Garamond","Cormorant",Georgia,serif;
+  --sans:"Montserrat",system-ui,sans-serif;
+  --gutter:clamp(1.25rem,4vw,3.5rem);
+  --block:clamp(4.5rem,10vw,9rem);
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--white);font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.wrap{max-width:84rem;margin-inline:auto;padding-inline:var(--gutter)}
+
+/* tom de cada faixa */
+.dark{background:var(--ink);color:var(--white);--soft:rgba(255,255,255,.62);--line:rgba(255,255,255,.16)}
+.light{background:var(--paper);color:var(--ink);--soft:rgba(10,10,10,.66);--line:rgba(10,10,10,.16)}
+.band{padding-block:var(--block)}
+
+.display{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacing:-.015em}
+.h2{font-size:clamp(2.5rem,5.4vw,4.75rem)}
+.note{font-size:.8125rem;font-weight:500;letter-spacing:.02em;color:var(--soft)}
+.soft{color:var(--soft)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.6rem;border-radius:99px;border:1px solid currentColor;background:transparent;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .25s,color .25s}
+.dark .btn:hover{background:var(--white);color:var(--ink)}
+.light .btn:hover{background:var(--ink);color:var(--paper)}
+.dark .btn.solid{background:var(--white);color:var(--ink);border-color:var(--white)}
+.dark .btn.solid:hover{background:transparent;color:var(--white)}
+.link{text-underline-offset:.3em;text-decoration-thickness:1px}
+.link:hover{text-decoration-thickness:2px}
+
+/* topo */
+.top{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:4.5rem}
+.logo{display:block;width:clamp(10.5rem,17vw,13.5rem);aspect-ratio:2186/219;background:currentColor;-webkit-mask:url(assets/logo.png) center/contain no-repeat;mask:url(assets/logo.png) center/contain no-repeat}
+.menu{display:flex;align-items:center;gap:clamp(1.25rem,2.6vw,2.5rem)}
+.menu a:not(.btn){font-size:.8125rem;font-weight:400;text-decoration:none;color:var(--soft);transition:color .2s}
+.menu a:not(.btn):hover{color:var(--white)}
+.menu .btn{min-height:2.5rem;padding:.4rem 1.2rem}
+.burger{display:none;background:none;border:0;padding:.6rem 0;font-size:.8125rem;font-weight:500;cursor:pointer}
+
+/* abertura */
+.hero{padding-top:clamp(2.5rem,4.6vw,4.25rem)}
+.hero h1{font-size:clamp(2.9rem,6.5vw,6.25rem);max-width:13em;text-wrap:balance}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.hero h1 .w>span{display:inline-block}
+.pitch{display:grid;grid-template-columns:1fr minmax(0,27rem);gap:2rem;margin-top:clamp(1.5rem,2.4vw,2.25rem)}
+.pitch>div{grid-column:2}
+.pitch p{color:var(--soft);max-width:27rem}
+.pitch .acts{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;margin-top:1.75rem}
+.pitch .link{font-size:.875rem;font-weight:400}
+
+/* projetos */
+.work{padding-top:clamp(2.5rem,4vw,3.5rem);padding-bottom:var(--block)}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.25rem}
+.strip{display:flex;gap:.5rem;height:clamp(22rem,64vh,41rem)}
+.piece{position:relative;flex:1 1 0;min-width:0;padding:0;border:0;background:#161616;overflow:hidden;cursor:pointer;text-align:left;transition:flex-grow .7s var(--ease)}
+.piece.on{flex-grow:6;cursor:default}
+.piece img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(.6);transition:filter .7s var(--ease),transform 1.2s var(--ease);transform:scale(1.06)}
+.piece.on img{filter:none;transform:none}
+.piece:not(.on):hover img{filter:brightness(.72) saturate(.9)}
+.piece::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:opacity .5s}
+.piece.on::after{opacity:1}
+.piece .side{position:absolute;left:50%;bottom:1.25rem;writing-mode:vertical-rl;transform:translateX(-50%) rotate(180deg);font-family:var(--serif);font-size:1.25rem;white-space:nowrap;transition:opacity .3s;z-index:1}
+.piece.on .side{opacity:0}
+.piece .cap{position:absolute;left:1.75rem;right:1.75rem;bottom:1.5rem;z-index:1;opacity:0;transform:translateY(.5rem);transition:opacity .3s,transform .3s;white-space:nowrap}
+.piece.on .cap{opacity:1;transform:none;transition:opacity .5s .3s,transform .5s .3s}
+.cap strong{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.75rem,2.6vw,2.5rem);line-height:1.1}
+.cap span{font-size:.8125rem;font-weight:400;color:rgba(255,255,255,.78)}
+
+/* serviços */
+.panel{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2rem,6vw,6rem);margin-top:clamp(2rem,4vw,3.5rem);padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--ink)}
+.panel p{max-width:33rem}
+.panel .btn{margin-top:2rem}
+.gets{columns:2;column-gap:2.5rem}
+.gets li{break-inside:avoid;padding:.8rem 0;border-bottom:1px solid var(--line);font-size:.9375rem;font-weight:400;line-height:1.45}
+.gets-title{margin-bottom:.5rem}
+
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1rem,2.4vw,2.25rem);margin-top:clamp(2rem,4vw,3.5rem);counter-reset:s}
+.steps li{counter-increment:s;padding-top:1.25rem;border-top:1px solid var(--ink)}
+.steps li::before{content:counter(s);display:block;font-family:var(--serif);font-size:1.5rem;line-height:1;color:var(--soft)}
+.steps h3{font-family:var(--serif);font-weight:400;font-size:1.75rem;line-height:1.15;margin:.9rem 0 .5rem}
+.steps p{font-size:.875rem;line-height:1.6;color:var(--soft)}
+.how{margin-top:var(--block)}
+
+/* sobre */
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2rem,7vw,7rem);align-items:end}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about p{max-width:34rem;margin-top:1.75rem;color:var(--soft)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(1.5rem,5vw,4.5rem);margin-top:clamp(2.5rem,5vw,4rem);padding-top:1.5rem;border-top:1px solid var(--line)}
+.facts dt{font-family:var(--serif);font-weight:300;font-size:clamp(2.5rem,4.6vw,4rem);line-height:1}
+.facts dd{margin:.4rem 0 0;font-size:.8125rem;font-weight:400;color:var(--soft)}
+.facts div{display:flex;flex-direction:column}
+
+/* depoimentos */
+.voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2.5rem,5vw,5rem) clamp(2rem,7vw,7rem);margin-top:clamp(2.5rem,5vw,4.5rem)}
+.voices figure:nth-child(even){margin-top:clamp(0rem,6vw,6rem)}
+.voices blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.375rem,2.1vw,1.875rem);line-height:1.32}
+.voices figcaption{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8125rem;font-weight:500}
+
+/* contato */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2.5rem,7vw,7rem)}
+.contact .lead{margin-top:1.5rem;max-width:26rem;color:var(--soft)}
+.ways{margin-top:2.5rem}
+.ways li{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-top:1px solid var(--line);font-size:.875rem}
+.ways li:last-child{border-bottom:1px solid var(--line)}
+.ways span{color:var(--soft)}
+.ways a{font-weight:400;text-decoration:none}
+.ways a:hover{text-decoration:underline;text-underline-offset:.3em}
+form{display:grid;gap:1.75rem;align-content:start}
+.field label{display:block;margin-bottom:.5rem;font-size:.8125rem;font-weight:500}
+.field input[type=text],.field textarea{width:100%;padding:.6rem 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-size:1rem;font-weight:300;transition:border-color .2s}
+.field textarea{min-height:6.5rem;resize:vertical;line-height:1.6}
+.field input:focus,.field textarea:focus{outline:0;border-bottom-color:var(--white)}
+.field ::placeholder{color:rgba(255,255,255,.4)}
+.error{font-size:.8125rem;font-weight:400;margin-top:.5rem}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.send small{font-size:.8125rem;color:var(--soft)}
+
+footer{border-top:1px solid var(--line);padding-block:2rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem 2rem}
+footer .logo{width:9.5rem}
+footer p{font-size:.75rem;color:var(--soft)}
+
+/* entrada: um único momento, na abertura */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero h1 .w>span{transform:translateY(105%);animation:rise .9s var(--ease) forwards;animation-delay:calc(var(--i)*55ms + 100ms)}
+  .js .pitch>div{opacity:0;animation:fade .8s ease forwards .75s}
+  .js .strip{clip-path:inset(100% 0 0 0);animation:open 1.1s var(--ease) forwards .55s}
+  @keyframes rise{to{transform:none}}
+  @keyframes fade{to{opacity:1}}
+  @keyframes open{to{clip-path:inset(0)}}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
+
+@media (max-width:60rem){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2.25rem}
+  .panel,.contact{grid-template-columns:1fr}
+  .about{grid-template-columns:minmax(0,3fr) minmax(0,5fr);align-items:start}
+}
+@media (max-width:47.5rem){
+  .burger{display:block}
+  .menu{position:absolute;inset:100% 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;padding:.5rem var(--gutter) 1.75rem;background:var(--ink);border-bottom:1px solid var(--line);display:none}
+  .menu.open{display:flex}
+  .menu a:not(.btn){width:100%;padding:.85rem 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--white)}
+  .menu .btn{margin-top:1.5rem;min-height:3rem}
+  .pitch{grid-template-columns:1fr}
+  .pitch>div{grid-column:1}
+  .work .wrap{padding-inline:0}
+  .work-head{padding-inline:var(--gutter)}
+  .strip{height:auto;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);scrollbar-width:none}
+  .strip::-webkit-scrollbar{display:none}
+  .piece,.piece.on{flex:0 0 82%;aspect-ratio:4/5;scroll-snap-align:start;cursor:default}
+  .piece img{filter:none;transform:none}
+  .piece::after{opacity:1}
+  .piece .side{display:none}
+  .piece .cap{opacity:1;transform:none;left:1.25rem;right:1.25rem;bottom:1.1rem;white-space:normal}
+  .gets{columns:1}
+  .steps{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .about img{max-width:20rem}
+  .facts{gap:1.25rem;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .voices{grid-template-columns:1fr}
+  .voices figure:nth-child(even){margin-top:0}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="top dark">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><span class="sr">Orlando 360, estúdio de branding</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#identidade">Identidade visual</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a class="btn" href="#contato">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero dark">
+    <div class="wrap">
+      <h1 class="display" id="titulo">Marcas únicas e memoráveis, com um olhar estratégico.</h1>
+      <div class="pitch">
+        <div>
+          <p>A Orlando 360 é um estúdio de branding. Transformamos a essência do seu negócio em uma marca autêntica, com uma identidade visual exclusiva.</p>
+          <div class="acts">
+            <a class="btn solid" href="#contato">Quero criar minha marca</a>
+            <a class="link" href="#identidade">Ver o que você recebe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work dark" id="projetos" aria-labelledby="projetos-t">
+    <div class="wrap">
+      <div class="work-head">
+        <h2 class="note" id="projetos-t">Projetos selecionados</h2>
+        <p class="note" id="conta" aria-hidden="true">1 / 5</p>
+      </div>
+      <div class="strip" id="strip">
+        <button class="piece on" type="button" aria-pressed="true">
+          <img src="assets/aura.jpg" width="900" height="600" alt="Embalagens da marca Aura, uma preta e uma verde-limão, seguradas à luz do sol">
+          <span class="side" aria-hidden="true">Aura</span>
+          <span class="cap"><strong>Aura</strong><span>Identidade visual e branding</span></span>
+        </button>
+        <button class="piece" type="button" aria-pressed="false">
+          <img src="assets/innovarsi.jpg" width="900" height="600" alt="Capa editorial da Innovarsi apoiada em uma poltrona de veludo caramelo">
+          <span class="side" aria-hidden="true">Innovarsi</span>
+          <span class="cap"><strong>Innovarsi</strong><span>Identidade visual, editorial</span></span>
+        </button>
+        <button class="piece" type="button" aria-pressed="false">
+          <img src="assets/celiana-costa.jpg" width="900" height="600" alt="Logotipo Celiana Costa Arquitetura e Interiores sobre um ambiente escuro com janela para o verde">
+          <span class="side" aria-hidden="true">Celiana Costa</span>
+          <span class="cap"><strong>Celiana Costa</strong><span>Identidade visual, arquitetura</span></span>
+        </button>
+        <button class="piece" type="button" aria-pressed="false">
+          <img src="assets/roma.jpg" width="900" height="600" alt="Marca Roma Assessoria Imobiliária aplicada sobre uma sala de estar em tons terrosos">
+          <span class="side" aria-hidden="true">Roma</span>
+          <span class="cap"><strong>Roma</strong><span>Identidade visual, imobiliária</span></span>
+        </button>
+        <button class="piece" type="button" aria-pressed="false">
+          <img src="assets/dra-livia-venancio.jpg" width="900" height="600" alt="Ecobag com a marca Dra. Lívia Venâncio, biomédica, pendurada em uma cadeira de madeira">
+          <span class="side" aria-hidden="true">Dra. Lívia Venâncio</span>
+          <span class="cap"><strong>Dra. Lívia Venâncio</strong><span>Identidade visual, saúde</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" id="identidade" aria-labelledby="identidade-t">
+    <div class="wrap">
+      <h2 class="display h2" id="identidade-t">O que você recebe</h2>
+
+      <div class="panel">
+        <div>
+          <p>Uma imersão na essência da sua marca para transformá-la em uma expressão visual única: logotipo, cores, tipografias e elementos gráficos que comunicam com clareza os valores do seu negócio.</p>
+          <p style="margin-top:1rem">Depois de tudo aprovado, você recebe todos os arquivos e o manual de marca, para manter a consistência no mercado.</p>
+          <a class="btn" href="#contato">Solicitar orçamento</a>
+        </div>
+        <div>
+          <h3 class="note gets-title">Entregáveis</h3>
+          <ul class="gets">
+            <li>Estratégia de marca</li>
+            <li>Marca: logotipo e variações</li>
+            <li>Paleta de cores</li>
+            <li>Tipografia de apoio</li>
+            <li>Textura e elementos gráficos</li>
+            <li>Apresentação em PDF com aplicações da marca</li>
+            <li>Arquivos fechados para impressão</li>
+            <li>Formatos .AI, .PDF, .EPS, .JPG, .SVG e .PNG</li>
+            <li>Manual de marca</li>
+            <li>Registro de anterioridade</li>
+            <li>Desdobramentos: papelaria e itens digitais</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="how" id="processo">
+        <h2 class="display h2">Do briefing à entrega</h2>
+        <ol class="steps">
+          <li><h3>Briefing</h3><p>Uma conversa para entender o negócio, o público e aonde a marca quer chegar.</p></li>
+          <li><h3>Estratégia</h3><p>Posicionamento, personalidade e os conceitos que vão guiar o desenho.</p></li>
+          <li><h3>Criação</h3><p>Logotipo, cores, tipografia e elementos gráficos tomam forma.</p></li>
+          <li><h3>Apresentação</h3><p>Você vê a marca aplicada em peças reais e aprova o projeto.</p></li>
+          <li><h3>Entrega</h3><p>Arquivos finais e manual de marca, prontos para usar.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="sobre" aria-labelledby="sobre-t">
+    <div class="wrap about">
+      <img src="assets/orlando.jpg" width="500" height="500" loading="lazy" alt="Retrato em preto e branco de Orlando, de perfil">
+      <div>
+        <h2 class="display h2" id="sobre-t">Sou o Orlando</h2>
+        <p>Designer brasileiro especializado em identidade visual, brand designer e diretor de arte da Orlando 360. Transformo sonhos em marcas estratégicas e sinto uma satisfação enorme em construir algo tão importante quanto a imagem de empresas e pessoas, com projetos para clientes no Brasil, nos Estados Unidos, no Canadá e na França.</p>
+        <dl class="facts">
+          <div><dt>242</dt><dd>projetos desenvolvidos</dd></div>
+          <div><dt>7</dt><dd>anos de experiência</dd></div>
+          <div><dt>4</dt><dd>países atendidos</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" aria-labelledby="vozes-t">
+    <div class="wrap">
+      <h2 class="display h2" id="vozes-t">O que dizem os clientes</h2>
+      <div class="voices">
+        <figure>
+          <blockquote>Quando contratei a Orlando 360, eu já tinha em mente o que queria para a minha marca, mas quando vi o projeto final, fiquei impressionada. As cores, a tipografia e os elementos são simplesmente espetaculares. Foi o melhor investimento que fiz.</blockquote>
+          <figcaption>Dra. Laiza Carvalho</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Essa nova identidade visual conseguiu captar perfeitamente todos os elementos que eu quis, a idealização feita por vocês era o que eu precisava e vai fazer total diferença para mim.</blockquote>
+          <figcaption>Celiana Costa</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Gostaria de agradecer por todo cuidado e dedicação no desenvolvimento da minha marca. Você captou a essência do que eu queria transmitir. Trouxe cores, leveza e uma tipografia linda. Estou encantada e extremamente feliz com cada detalhe.</blockquote>
+          <figcaption>Miriam Marinho</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Obrigado pela logo meu amigo, muito bom saber que minha loja vai começar com algo exclusivo, simples e que passa a mensagem que tinha em mente para ela.</blockquote>
+          <figcaption>Italo Langbehn</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="contato" aria-labelledby="contato-t">
+    <div class="wrap contact">
+      <div>
+        <h2 class="display h2" id="contato-t">Vamos trabalhar juntos</h2>
+        <p class="lead">Conte o básico sobre a sua marca. A mensagem abre pronta no WhatsApp, e a conversa continua por lá.</p>
+        <ul class="ways">
+          <li><span>WhatsApp</span><a href="https://wa.me/558396175060" target="_blank" rel="noopener">+55 83 9617-5060</a></li>
+          <li><span>E-mail</span><a href="mailto:contato@orlando360.com">contato@orlando360.com</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/orlando360design/" target="_blank" rel="noopener">@orlando360design</a></li>
+        </ul>
+      </div>
+      <form id="pedido" novalidate>
+        <div class="field">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="nome-erro">
+          <p class="error" id="nome-erro" role="alert" hidden>Escreva seu nome para montar a mensagem.</p>
+        </div>
+        <div class="field">
+          <label for="negocio">Sobre o seu negócio</label>
+          <textarea id="negocio" name="negocio" placeholder="O que você faz, para quem, e o que espera da marca"></textarea>
+        </div>
+        <div class="send">
+          <button class="btn solid" type="submit">Enviar pelo WhatsApp</button>
+          <small>Nada é enviado antes de você confirmar no WhatsApp.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <span class="logo" role="img" aria-label="Orlando 360"></span>
+    <p>© <span id="ano">2026</span> Orlando 360 Design. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+
+  // título: uma palavra por vez na abertura
+  var h=$('#titulo'), words=h.textContent.trim().split(' ');
+  h.setAttribute('aria-label',h.textContent.trim());
+  h.innerHTML=words.map(function(w,i){return '<span class="w" aria-hidden="true"><span style="--i:'+i+'">'+w+'</span></span>'}).join(' ');
+
+  // projetos: a faixa escolhida se abre
+  var pieces=$$('.piece'), conta=$('#conta'), strip=$('#strip');
+  function pick(i){
+    pieces.forEach(function(p,n){p.classList.toggle('on',n===i);p.setAttribute('aria-pressed',n===i)});
+    conta.textContent=(i+1)+' / '+pieces.length;
+  }
+  pieces.forEach(function(p,i){
+    p.addEventListener('click',function(){pick(i)});
+    p.addEventListener('focus',function(){pick(i)});
+    p.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')pick(i)});
+  });
+  strip.addEventListener('scroll',function(){
+    if(strip.scrollWidth<=strip.clientWidth)return;
+    var step=pieces[1].offsetLeft-pieces[0].offsetLeft;
+    conta.textContent=(Math.min(pieces.length-1,Math.round(strip.scrollLeft/step))+1)+' / '+pieces.length;
+  },{passive:true});
+  conta.textContent='1 / '+pieces.length;
+
+  // menu no celular
+  var burger=$('.burger'), menu=$('#menu');
+  function setMenu(o){menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.textContent=o?'Fechar':'Menu'}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+
+  // pedido: monta a mensagem e abre o WhatsApp
+  var form=$('#pedido'), nome=$('#nome'), erro=$('#nome-erro');
+  nome.addEventListener('input',function(){erro.hidden=true;nome.removeAttribute('aria-invalid')});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=nome.value.trim();
+    if(!n){erro.hidden=false;nome.setAttribute('aria-invalid','true');nome.focus();return}
+    var b=$('#negocio').value.trim(), nl=String.fromCharCode(10);
+    var msg='Olá! Meu nome é '+n+' e quero solicitar um orçamento de identidade visual com a Orlando 360.'+(b?nl+nl+'Sobre o meu negócio: '+b:'');
+    window.open('https://wa.me/558396175060?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+
+  $('#ano').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
